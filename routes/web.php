@@ -1,4 +1,7 @@
 <?php
+use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\View;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -11,7 +14,7 @@
 |
 */
 
-Route::get('/','HomeController@index')->name('home');
+Route::get('/', 'HomeController@index')->name('home');
 Route::post('subscriber','SubscriberController@store')->name('subscriber.store');
 
 Route::get('login/facebook', 'Auth\LoginController@redirectToProvider');

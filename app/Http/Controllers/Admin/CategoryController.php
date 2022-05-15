@@ -45,7 +45,7 @@ class CategoryController extends Controller
         $this->validate($request,[
             'name' => 'required|unique:categories',
             'image' => 'required:mimes:jpeg,bmp,png,jpg',
-            //'image' => 'required'
+            'image' => 'required'
         ]);
         // get form image
         $image = $request->file('image');
