@@ -101,7 +101,7 @@ class PostController extends Controller
                 ->notify(new NewPostNotify($post));
         }*/
         $users=User::where('role_id','1')->get();
-        Notification::send($users,new NewAuthorPost($post));
+        // Notification::send($users,new NewAuthorPost($post));
         Toastr::success('Post Successfully Saved :)','Success');
         return redirect()->route('author.post.index');
     }

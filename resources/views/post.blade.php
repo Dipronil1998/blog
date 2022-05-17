@@ -11,7 +11,7 @@
 		.header-bg{
             height: 600px;
             width: 100%;
-            /* background-image: url({{ asset('/storage/post/'.$post->image) }}); */
+            background-image: url({{ asset('/storage/post/'.$post->image) }});
             background-size: cover;
         }
         .favorite_posts{

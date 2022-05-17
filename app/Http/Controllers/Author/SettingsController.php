@@ -25,7 +25,8 @@ class SettingsController extends Controller
     	$this->validate($request,[
     		'name'=>'required',
     		//'email'=>'required|email',
-    		'image'=>'image'
+    		'image'=>'image',
+            'image' => 'mimes:jpeg,bmp,png,jpg'
     	]);
     	$image=$request->file('image');
     	$slug=str_slug($request->name);
